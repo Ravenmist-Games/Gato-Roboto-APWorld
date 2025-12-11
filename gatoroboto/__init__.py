@@ -8,17 +8,18 @@ from .Items import (heater_events_item_data_table,
                     vent_events_item_data_table, 
                     healthkits_item_data_table, 
                     item_data_table)
-from .Locations import (GatoRobotoLocation, 
-                        location_table, 
-                        healthkit_location_data_table, 
-                        cartridge_location_data_table, 
-                        module_location_data_table, 
-                        event_location_data_table)
+from .Locations import (GatoRobotoLocation,
+                        location_table,
+                        healthkit_location_data_table,
+                        cartridge_location_data_table,
+                        module_location_data_table,
+                        event_location_data_table,
+                        victory_location_data_table)
 from .Names import ItemName, LocationName
 from .Options import GatoRobotoOptions, gatoroboto_option_groups
 from worlds.LauncherComponents import Type, launch_subprocess, Component, icon_paths, components
 from .Presets import gatoroboto_options_presets
-import Utils
+from Utils import local_path
 
 from .Names import RegionName
 
@@ -41,7 +42,7 @@ components.append(Component("Gato Roboto Client",
                             supports_uri=True,
                             game_name="Gato Roboto"))
 
-icon_paths['kiki'] = Utils.user_path("worlds/gatoroboto/data", "Kiki.png")
+icon_paths['kiki'] = f"ap:{__name__}/data/Kiki.png"
 
 def data_path(file_name: str):
     import pkgutil
@@ -99,12 +100,20 @@ class GatoRobotoWorld(World):
         item_pool += [self.create_item(name) 
                 for name in vent_events_item_data_table.keys()]
 
+        #Place aqua 3 check if not rocket jumps to prevent softlock
         if not self.options.rocket_jumps:
             item_pool.remove(self.create_item(ItemName.progressive_aqueducts_3))
             aqueducts_3 = self.get_location(LocationName.loc_progressive_aqueducts_3)
             aqueducts_3.place_locked_item(GatoRobotoItem(ItemName.progressive_aqueducts_3,
                                                          ItemClassification.progression,
                                                          10239, self.player))
+        
+        #Place locked victory item & set completion condition
+        victory_loc = self.get_location(LocationName.loc_victory)
+        victory_loc.place_locked_item(GatoRobotoItem(ItemName.victory,
+                                                     ItemClassification.progression,
+                                                     10999, self.player))
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
 
         self.multiworld.itempool += item_pool
     
@@ -138,16 +147,13 @@ class GatoRobotoWorld(World):
                 for location_name, location_data in event_location_data_table.items()
                 if location_data.region == region_name
             })
+            region.add_locations({
+                location_name: location_data.address
+                for location_name, location_data in victory_location_data_table.items()
+                if location_data.region == region_name
+            })
             
             region.add_exits(region_data_table[region_name].connecting_regions)
-
-        # Victory Logic
-        victory_region = self.get_region(RegionName.region_laboratory)
-        victory_location = GatoRobotoLocation(self.player, "Gary Defeated", 11319, victory_region)
-        victory_location.place_locked_item(GatoRobotoItem("Victory",  ItemClassification.progression, 10999,
-                                                          self.player))
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
-        victory_region.locations.append(victory_location)
             
     def get_filler_item_name(self):
         return ItemName.healthkit # not sure what this is doing

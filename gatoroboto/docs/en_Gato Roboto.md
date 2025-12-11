@@ -6,19 +6,17 @@ Visit the [options page for this game](../player-options) to generate a YAML fil
 
 ## What does randomization do to this game?
 
-Currently, the randomizer supports item and event randomization. There are also options to include skips and/or sequence 
-breaks, such as **Rocket Jumping**, to vary the logic.
+Currently the randomizer supports item and event randomization. There are also options to include skips and/or sequence breaks, such as **Rocket Jumping**, to vary the logic.
 
-The default goal is to **Defeat Gary**, which is identical to the vanilla experience. Other future goal implementations
-will include **All Cartridges** and **100%**, to provide alternative and longer, more progressive experiences.
+The default goal is to **Defeat Gary**, which is identical to the vanilla experience. No other goals exist currently, but future plans include **All Cartridges** and **100%** as alternative and longer gameplay experiences.
 
 ## What items and locations get randomized?
 
-All of the following are randomized by default:
+By default, all of the following are randomized:
 - Healthkits
 - Cartridges
 - Upgrade Modules
-- Progressive Events
+- Progressive Events (Aqueducts' Treadmills, Heater Core's Hotboys and Heater Tubes, Ventilation's Buttons)
 - Rebba's Shop
 
 A future update will enable options to disable shuffling of these individual item groups.
@@ -31,4 +29,6 @@ A few quality of life improvements have been made to the base game:
 - A single save slot exists to contain the AP save, to avoid save file issues.
 - Starting a new game now places Kiki directly in the mech room, allowing the player immediate access to the mech suit.
 - Tutorial dialogs (intro, swimming, mech, etc.) have been removed.
-- 'Warp to Nexus' is now a pause menu option, allowing players to warp to the Big PC once they have visited the Nexus.
+- Warps have been added to the pause menu, allowing players to warp to any area they've previously been to.
+- All collectible item sprites have been replaced with the AP icon.
+- WARNING: USE WITH CAUTION. Press F12 to enable/disable the debug menu in the pause menu rotation. Keys 1-9 can also be used to increment the debug menu options.

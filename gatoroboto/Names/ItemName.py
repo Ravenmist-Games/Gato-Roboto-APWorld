@@ -109,3 +109,6 @@ Cartridges: List[str] = [
     cartridge_swamp_matcha,
     cartridge_grape
 ]
+
+#Victory
+victory = "Victory"

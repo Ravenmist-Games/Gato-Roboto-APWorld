@@ -60,11 +60,11 @@ cartridge_location_data_table: Dict[str, GatoRobotoLocationData] = {
     LocationName.loc_cartridge_chewed_gum:
         GatoRobotoLocationData(RegionName.region_heater_core, gatoroboto_base_id + 1916),
     LocationName.loc_cartridge_gris:
-        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 1614),
+        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 1613),
     LocationName.loc_cartridge_grape:
-        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 518),
+        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 517),
     LocationName.loc_cartridge_tamagato:
-        GatoRobotoLocationData(RegionName.region_incubator, gatoroboto_base_id + 1514),
+        GatoRobotoLocationData(RegionName.region_incubator, gatoroboto_base_id + 1513),
 }
 
 module_location_data_table: Dict[str, GatoRobotoLocationData] = {
@@ -102,16 +102,22 @@ event_location_data_table: Dict[str, GatoRobotoLocationData] = {
     LocationName.loc_progressive_ventilation_1:
         GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 1113),
     LocationName.loc_progressive_ventilation_2:
-        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 1123),
+        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 1122),
     LocationName.loc_progressive_ventilation_3:
-        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 522)
+        GatoRobotoLocationData(RegionName.region_ventilation, gatoroboto_base_id + 521)
+}
+
+victory_location_data_table: Dict[str, GatoRobotoLocationData] = {
+    LocationName.loc_victory:
+        GatoRobotoLocationData(RegionName.region_laboratory, gatoroboto_base_id + 1319)
 }
 
 location_data_table: Dict[str, GatoRobotoLocationData] = {
     **healthkit_location_data_table,
     **cartridge_location_data_table,
     **module_location_data_table,
-    **event_location_data_table
+    **event_location_data_table,
+    **victory_location_data_table
 }
 
 location_table = {name: data.address for name, data in location_data_table.items()}

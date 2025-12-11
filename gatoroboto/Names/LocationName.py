@@ -111,3 +111,5 @@ ProgressiveVentilationLocations: List[str] = [
     loc_progressive_ventilation_2,
     loc_progressive_ventilation_3
 ]
+
+loc_victory = "Victory"

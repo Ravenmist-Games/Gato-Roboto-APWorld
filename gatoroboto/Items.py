@@ -71,13 +71,18 @@ vent_events_item_data_table: Dict[str, GatoRobotoItemData] = {
     ItemName.progressive_ventilation_3: GatoRobotoItemData(gato_roboto_base_id + 264, ItemClassification.progression),
 }
 
+victory_item_data_table: Dict[str, GatoRobotoItemData] = {
+    ItemName.victory: GatoRobotoItemData(gato_roboto_base_id + 999, ItemClassification.progression)
+}
+
 item_data_table: Dict[str, GatoRobotoItemData] = {
     **modules_item_data_table, 
     **cartridges_item_data_table,
     **healthkits_item_data_table,
     **heater_events_item_data_table,
     **aqueduct_events_item_data_table,
-    **vent_events_item_data_table
+    **vent_events_item_data_table,
+    **victory_item_data_table
 }
 
 item_table = {name: data.code for name, data in item_data_table.items()}
