@@ -1,4 +1,4 @@
 # Gato Roboto APWorld Changelog
 
-## v.0.1.0-alpha
+## v0.1.0-alpha
 - Initial Release
