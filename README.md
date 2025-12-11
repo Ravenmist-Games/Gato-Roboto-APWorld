@@ -9,8 +9,8 @@ A bite-sized metroidvania platformer gets the Archipelago treatment!
 ⚠ *Only tested on **Windows 10** in English* ⚠
 
 - Gato Roboto: [Steam Store](https://store.steampowered.com/app/916730)
-- Archipelago: [Archipelago Releases Page](https://github.com/ArchipelagoMW/Archipelago/releases)
-- APWorld: [Releases Page](https://github.com/AlexanderLeBlanc/Gato-Roboto-APWorld/releases)
+- Archipelago: [Archipelago Releases Page](https://github.com/ArchipelagoMW/Archipelago/releases/latest)
+- APWorld: [Releases Page](https://github.com/AlexanderLeBlanc/Gato-Roboto-APWorld/releases/latest)
 
 ## What does randomization do to this game?
 
@@ -36,3 +36,11 @@ A few QoL improvements have been made to the base game:
 - Tutorial dialogs (intro, swimming, mech, etc.) have been removed.
 - All collectible item sprites have been replaced with the AP icon.
 - WARNING: USE WITH CAUTION. Press F12 to enable/disable the debug menu in the pause menu rotation. Keys 1-9 can also be used to increment the debug menu options.
+
+## Bug Reports & Feature Requests
+
+For any bug reports and/or feature requests, please create a related [Issue](https://github.com/Ravenmist-Games/Gato-Roboto-APWorld/issues) and document it appropriately.
+
+## Contributing
+
+Please take a look at our [guide](/docs/contributing.md) before making a contribution.
