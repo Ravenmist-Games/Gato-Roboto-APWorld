@@ -12,6 +12,8 @@ A bite-sized metroidvania platformer gets the Archipelago treatment!
 - Archipelago: [Archipelago Releases Page](https://github.com/ArchipelagoMW/Archipelago/releases/latest)
 - APWorld: [Releases Page](https://github.com/Ravenmist-Games/Gato-Roboto-APWorld/releases/latest)
 
+**Visit the [guide doc](/gatoroboto/docs/guide_en.md) for instructions on first time setup.**
+
 ## What does randomization do to this game?
 
 Currently the randomizer supports item and event randomization. There are also options to include skips and/or sequence breaks, such as **Rocket Jumping**, to vary the logic.
