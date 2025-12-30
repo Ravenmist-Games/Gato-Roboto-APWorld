@@ -105,6 +105,8 @@
 ### Known Issues
 - Can sometimes end up with more than the maximum amount of healthkits during asyncs or crashes
 - Rare instance of a crash after defeating the first Hotboy
+- Dialog boxes for receiving Repeater and Hopper persist on-screen until room change
+- Entering a room and receiving an item at the same time can sometimes lead to Kiki getting stuck in the floor
 
 ## v0.1.0-alpha
 - Initial Release
