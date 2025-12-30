@@ -14,6 +14,12 @@
 - Fixed Progressive Ventilation 3 button not sending a check
 - Fixed Progressive Heater Core 3 not sending a check after entering from Coolant room
 
+### Known Issues
+- Can sometimes end up with more than the maximum amount of healthkits during asyncs or crashes
+- Rare instance of a crash after defeating the first Hotboy
+- Dialog boxes for receiving Repeater and Hopper persist on-screen until room change
+- Entering a room and receiving an item at the same time can sometimes lead to Kiki getting stuck in the floor
+
 ### Logic Changes
 *Please take into account existing region access rules when reading the logic changes listed below, as they are not listed.*
 *Multiple logic rules are listed on separate lines.*
@@ -101,12 +107,6 @@
   - [`>= 2 Prog. Heater Core` & `Spin Jump`]
 - Alternate Logic
   - [`>= 2 Prog. Heater Core` & `Rocket Jumps`]
-
-### Known Issues
-- Can sometimes end up with more than the maximum amount of healthkits during asyncs or crashes
-- Rare instance of a crash after defeating the first Hotboy
-- Dialog boxes for receiving Repeater and Hopper persist on-screen until room change
-- Entering a room and receiving an item at the same time can sometimes lead to Kiki getting stuck in the floor
 
 ## v0.1.0-alpha
 - Initial Release
