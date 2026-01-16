@@ -6,11 +6,13 @@ A bite-sized metroidvania platformer gets the Archipelago treatment!
 
 ## Required Software
 
-⚠ *Only tested on **Windows 10** in English* ⚠
+⚠ *Tested on **Windows 10/11** and **Linux (Proton)** in English* ⚠
 
 - Gato Roboto: [Steam Store](https://store.steampowered.com/app/916730)
 - Archipelago: [Archipelago Releases Page](https://github.com/ArchipelagoMW/Archipelago/releases/latest)
 - APWorld: [Releases Page](https://github.com/Ravenmist-Games/Gato-Roboto-APWorld/releases/latest)
+
+**Visit the [guide doc](/gatoroboto/docs/guide_en.md) for instructions on first time setup.**
 
 ## What does randomization do to this game?
 
